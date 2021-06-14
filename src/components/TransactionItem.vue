@@ -99,9 +99,9 @@ export default defineComponent({
 <style>
 li {
   list-style-type: none;
+  text-align: left;
   padding: 0;
   margin: 0;
-  text-align: left;
 }
 
 label {

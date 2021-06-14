@@ -48,19 +48,24 @@ export default defineComponent({
 </script>
 
 <style scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
+/*.transactions-container {
+/*  display: flex;
+/*  flex-direction: column;
+/*  justify-content: center;
+/*  align-items: center;
+/*  align-content: center;
+/*  margin: auto;
+/*}
+/*
+/*label {
+/*  margin: 0 0.5em;
+/*  font-weight: bold;
+/*}
+/*
+/*code {
+/*  background-color: #eee;
+/*  padding: 2px 4px;
+/*  border-radius: 4px;
+/*  color: #304455;
+/*}*/
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <div v-if="walletRef">
-    <h1>Wallet: {{ walletRef.publicKey }}</h1>
-  </div>
+  <!-- <div v-if="walletRef"> -->
+  <!--   <h1>Wallet: {{ walletRef.publicKey }}</h1> -->
+  <!-- </div> -->
+  <SenderForm @onSendMoney="didSendMoney" />
   <div v-if="transactionsRef">
     <TransactionsList :transactions="transactionsRef" />
   </div>
@@ -10,7 +11,7 @@
 <script lang="ts">
 import { Connection } from "@solana/web3.js";
 import { defineComponent, watchEffect, ref } from "vue";
-//import SenderForm from "./components/SenderForm.vue";
+import SenderForm from "./components/SenderForm.vue";
 import TransactionsList from "./components/TransactionsList.vue";
 import { initWallet, WalletAdapter } from "./composables/useWallet";
 import {
@@ -21,7 +22,7 @@ import {
 export default defineComponent({
   name: "App",
   components: {
-    //  SenderForm,
+    SenderForm,
     TransactionsList,
   },
   setup: () => {
@@ -55,16 +56,16 @@ export default defineComponent({
       });
     });
 
-    // function didSendMoney() {
-    //   console.log("didSendMoney triggered");
-    //   getTransactions(connectionRef.value!, walletRef.value!.publicKey!).then(
-    //     (transactions: TransactionWithSignature[]) => {
-    //       transactionsRef.value = transactions;
-    //     }
-    //   );
-    // }
+    function didSendMoney() {
+      console.log("didSendMoney triggered");
+      getTransactions(connectionRef.value!, walletRef.value!.publicKey!).then(
+        (transactions: TransactionWithSignature[]) => {
+          transactionsRef.value = transactions;
+        }
+      );
+    }
 
-    return { transactionsRef, walletRef };
+    return { transactionsRef, walletRef, didSendMoney };
   },
 });
 </script>
@@ -74,8 +75,6 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

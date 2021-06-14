@@ -46,39 +46,39 @@ export default defineComponent({
 </script>
 
 <style scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
-
-form {
-  margin: 0 auto;
-  padding: 10px 0;
-  width: 600px;
-  border: 1px solid black;
-}
-
-.send-inputs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.send-inputs div {
-  width: 50%;
-  text-align: right;
-  margin: 5px 0;
-}
+/*a {
+/*  color: #42b983;
+/*}
+/*
+/*label {
+/*  margin: 0 0.5em;
+/*  font-weight: bold;
+/*}
+/*
+/*code {
+/*  background-color: #eee;
+/*  padding: 2px 4px;
+/*  border-radius: 4px;
+/*  color: #304455;
+/*}
+/*
+/*form {
+/*  margin: 0 auto;
+/*  padding: 10px 0;
+/*  width: 600px;
+/*  border: 1px solid black;
+/*}
+/*
+/*.send-inputs {
+/*  display: flex;
+/*  flex-direction: column;
+/*  align-items: center;
+/*  justify-content: center;
+/*}
+/*
+/*.send-inputs div {
+/*  width: 50%;
+/*  text-align: right;
+/*  margin: 5px 0;
+/*}*/
 </style>
